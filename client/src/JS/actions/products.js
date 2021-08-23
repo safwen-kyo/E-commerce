@@ -8,6 +8,7 @@ import {
   DELETE_PRODUCT,
   GET_PRODUCT,
   POST_PRODUCT,
+  POST_PRODUCT_FAILD,
   GET_SEARCHED,
   PRODUCT_ERROR,
 } from "../constants/constant";
@@ -114,7 +115,9 @@ export const postProduct = (produit) => async (dispatch) => {
     dispatch(getProducts());
     alert(result.data.message);
   } catch (error) {
-    console.log(error);
+      
+      dispatch({ type: POST_PRODUCT_FAILD, payload: error.response.data });
+    
   }
 };
 

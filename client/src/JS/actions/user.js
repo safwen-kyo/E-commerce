@@ -13,7 +13,7 @@ export const registerUser = (user, history) => async (dispatch) => {
   try {
     const response = await axios.post("/user/register", user);
     dispatch({ type: REGISTER_USER, payload: response.data.user });
-    history.push("/dashboard");
+    //history.push("/login");
   } catch (error) {
     console.dir(error.response.data);
     const { errors, msg } = error.response.data;
@@ -35,7 +35,7 @@ export const loginUser = (userAuth, history) => async (dispatch) => {
     const response = await axios.post("/user/login", userAuth);
     console.log("response", response);
     dispatch({ type: LOGIN_USER, payload: response.data });
-    history.push("/dashboard");
+    history.push("/");
   } catch (error) {
     const { errors, msg } = error.response.data;
     if (msg) {

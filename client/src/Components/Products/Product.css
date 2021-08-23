@@ -1,4 +1,8 @@
 .procards {
   display: flex;
   background-color: rgb(231, 14, 14);
+  margin: 5px;
+  border: solid 2px 2px 2px 2px  #d5d4d4;
+  
 }
+

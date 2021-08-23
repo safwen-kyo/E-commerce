@@ -2,19 +2,20 @@ const express = require("express");
 const router = express.Router();
 const Product = require("../models/product");
 
+
 router.get("/testadmin", (req, res) => {
   res.send("Hello World!");
 });
 
 //add new product
-router.post("/", async (req, res) => {
+router.post("/" , async (req, res) => {
   try {
     const newProduct = new Product(req.body);
     const response = await newProduct.save();
     res.send({ res: response, message: "New Product added" });
   } catch (error) {
     console.log(error);
-    res.status(400).send("status 400");
+    res.status(500).json({ errors: error , msg :"Can not Add Product" });
   }
 });
 

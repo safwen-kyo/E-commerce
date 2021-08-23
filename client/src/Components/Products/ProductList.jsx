@@ -31,7 +31,7 @@ const ProductList = () => {
   return (
     <div className="product">
       {loadProducts ? (
-        <h2>Loading</h2>
+        <div class="loader"></div>
       ) : (
         products.map((el) => <Product key={el._id} product={el} />)
       )}

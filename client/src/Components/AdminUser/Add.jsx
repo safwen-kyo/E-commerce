@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import { postProduct, editProduct } from "../../JS/actions/products";
-
+import Loading from "../Loading/Loading"
 const Add = () => {
   const [produit, setProduit] = useState({
     names: "",
@@ -59,7 +59,7 @@ const Add = () => {
   return (
     <>
       {loadProducts ? (
-        <h2>Loading</h2>
+        <Loading/>
       ) : (
         <Form>
           <Row className="mb-3">
@@ -71,7 +71,7 @@ const Add = () => {
                 value={produit.names}
                 onChange={handelChange}
                 name="names"
-              />
+               required/>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
@@ -82,7 +82,7 @@ const Add = () => {
                 value={produit.descriptions}
                 onChange={handelChange}
                 name="descriptions"
-              />
+                required />
             </Form.Group>
           </Row>
           <Row className="mb-3">
@@ -94,7 +94,7 @@ const Add = () => {
                 value={produit.images}
                 onChange={handelChange}
                 name="images"
-              />
+                required />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
@@ -105,7 +105,7 @@ const Add = () => {
                 value={produit.prices}
                 onChange={handelChange}
                 name="prices"
-              />
+                required />
             </Form.Group>
           </Row>
           <Row className="mb-3">
@@ -117,18 +117,37 @@ const Add = () => {
                 value={produit.siteofficiel}
                 onChange={handelChange}
                 name="siteofficiel"
-              />
+                required />
             </Form.Group>
-
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Categories of Product</Form.Label>
+            
+            <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="inputGroupSelect01">Options</label>
+              </div>
+              <select className="custom-select"  name="categories"  value={produit.categories} onChange={handelChange}  >
+          <option selected >Choose...</option>
+          <option value="Informatique">Informatique</option>
+          <option value="Telephonie">Téléphonie</option>
+          <option value="Image & Son">Image & Son</option>
+          <option value="Electroménager">Electroménager</option>
+          <option value="Photo & Caméra">Photo & Caméra</option>
+          </select>
+ {/*<Form.Label>Categories of Product</Form.Label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+                </select>
               <Form.Control
                 type="text"
                 placeholder="Categories of Product"
                 value={produit.categories}
                 onChange={handelChange}
                 name="categories"
-              />
+                required  />*/}
+               
             </Form.Group>
           </Row>
           <Row className="mb-3">
@@ -140,7 +159,7 @@ const Add = () => {
                 value={produit.linkproducts}
                 onChange={handelChange}
                 name="linkproducts"
-              />
+                required/>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">

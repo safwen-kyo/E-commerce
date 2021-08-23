@@ -1,7 +1,6 @@
 
 
 .card {
-    border: none;
     background: #eee;
     margin-bottom: 100px;
 }
@@ -90,4 +89,8 @@ a:link {
 .button {
     background: none;
     border: none;
+}
+.row{
+    margin-top: 5px;
+    justify-content: center;
 }

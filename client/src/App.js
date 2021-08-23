@@ -1,5 +1,7 @@
 import ProductList from "./Components/Products/ProductList";
 import { Switch, Route, Link } from "react-router-dom";
+import ScrollToTop from "./Components/scrollToTop";
+
 import Main from "./Components/Main/Main"
 import Add from "./Components/AdminUser/Add";
 import AdminProductList from "./Components/AdminUser/AdminProductList";
@@ -11,6 +13,7 @@ import Dashboard from "./Components/Dashboard";
 import Header from "./Components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { currentUser } from "./JS/actions/user";
+import Footer from "./Components/Footer/Footer"
 import React, { useState, useEffect } from "react";
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +31,7 @@ function App() {
 
   return (
     <div className="app">
+      <ScrollToTop />
       {/*<h4>COMPARTEUR DES PRIX</h4>
       <Search />
 
@@ -51,6 +55,7 @@ function App() {
         {/* <Route exact path="/admin" component={AdminProductList} /> */}
         <PrivateR exact path={["/add", "/edit/:id"]} component={Add} />
       </Switch>
+      <Footer/>
     </div>
   );
 }

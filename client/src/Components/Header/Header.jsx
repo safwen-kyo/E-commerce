@@ -11,14 +11,14 @@ const  Header =() =>{
 
   const authLinks = (
     <ul>
+      <li>
+          <span className="hide-sm" >{`Welcome ${user.name}`}</span>
+      </li>
+
        <li>
         <Link to="/" className="active">Home</Link>
       </li>
-      <li>
-        <Link to="/dashboard">
-          <span className="hide-sm">Dashboard</span>
-        </Link>
-      </li>
+      
       
       {user ? user.isAdmin === true && <li>
         <Link to="/admin">Add Products</Link>
@@ -44,7 +44,7 @@ const  Header =() =>{
 
     <ul>
     <li>
-      <Link to="/" className="active">Home</Link>
+      <Link exact to="/" className="active">Home</Link>
     </li>
     <li>
       <Link to="/about">About Us</Link>
