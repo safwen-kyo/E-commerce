@@ -1,0 +1,112 @@
+.app {
+  width: 65%;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+tr {
+  overflow-x: scroll;
+}
+th,
+td {
+  padding: 15px 15px;
+  vertical-align: middle;
+  text-align: left;
+}
+thead {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Lato;
+  border: 1px solid transparent;
+
+  max-width: 100%;
+  font-weight: 900;
+  line-height: 24px;
+  mix-blend-mode: normal;
+
+  color: rgba(51, 51, 51, 0.5);
+  background: rgba(255, 255, 255, 0.9);
+}
+thead tr th {
+  padding: 15px 15px;
+  border: 1px solid transparent;
+
+  text-align: left;
+}
+tbody {
+  max-width: 100%;
+}
+tbody tr:nth-child(odd) {
+  background: #f0f0f2;
+}
+tbody tr:hover {
+  background: #f0f0f2;
+}
+td {
+  padding: 15px 15px;
+}
+td:first-child {
+}
+
+.pagination {
+  margin-top: 25px;
+}
+.pagination span {
+  cursor: pointer;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination span.active {
+  background-color: #0099ff;
+  color: white;
+  border: 1px solid #0099ff;
+}
+.img {
+  display: inline-block;
+}
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+.main {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h3 {
+  background-color: #4294d1;
+  color: #f7f7f7;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+}
+
+p {
+  margin-top: 0;
+}
+
+.product-container {
+  background: white;
+  padding: 4px;
+  position: relative;
+  border: 1px solid #d7d5d5;
+  border-radius: 10px;
+  height: 550px;
+}

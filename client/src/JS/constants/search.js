@@ -1,0 +1,2 @@
+export const PRODUCT_ERROR = 'PRODUCT_ERROR';
+export const GET_SEARCHED = 'GET_SEARCHED';
